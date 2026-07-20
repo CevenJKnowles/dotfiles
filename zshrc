@@ -70,3 +70,7 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# Google Cloud SDK
+export PATH="$HOME/Dev/04_Lewagon/google-cloud-sdk/bin:$PATH"
+if [ -f "$HOME/Dev/04_Lewagon/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/Dev/04_Lewagon/google-cloud-sdk/completion.zsh.inc"; fi
