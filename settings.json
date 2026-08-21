@@ -100,4 +100,12 @@
     "workbench.preferredLightColorTheme": "Dark 2026",
     "workbench.editor.showTabs": "single",
     "diffEditor.renderSideBySide": false,
+    "yaml.disableSchemaDetection": [
+      "**/.github/workflows/*.yml",
+      "**/.github/workflows/*.yaml",
+      "**/.gitea/workflows/*.yml",
+      "**/.gitea/workflows/*.yaml",
+      "**/.forgejo/workflows/*.yml",
+      "**/.forgejo/workflows/*.yaml"
+    ],
 }
