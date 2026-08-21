@@ -75,7 +75,6 @@
     "telemetry.telemetryLevel": "off",
     "window.restoreWindows": "none",
     "window.newWindowDimensions": "maximized",
-    "workbench.editor.enablePreview": false,
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
@@ -113,4 +112,5 @@
       "vscode-kubernetes.kubectl-path-linux": "/home/cjk/.local/state/vs-kubernetes/tools/kubectl/kubectl",
       "vscode-kubernetes.minikube-path-linux": "/home/cjk/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
     },
+    "workbench.editor.highlightModifiedTabs": true,
 }
