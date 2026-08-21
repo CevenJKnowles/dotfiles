@@ -87,7 +87,7 @@
     "makefile.configureOnOpen": false,
     "claudeCode.preferredLocation": "sidebar",
     "workbench.colorTheme": "Visual Studio Dark",
-    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.iconTheme": "symbols",
     "notebook.cellExecutionTimeVerbosity": "verbose",
     "notebook.cellFocusIndicator": "border",
     "window.newWindowProfile": "Default",
@@ -97,4 +97,5 @@
     "chat.viewSessions.orientation": "stacked",
     "window.autoDetectColorScheme": true,
     "explorer.confirmDragAndDrop": false,
+    "workbench.preferredLightColorTheme": "Dark 2026",
 }
