@@ -75,7 +75,7 @@
     "telemetry.telemetryLevel": "off",
     "window.restoreWindows": "none",
     "window.newWindowDimensions": "maximized",
-    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreview": false,
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
@@ -98,4 +98,6 @@
     "window.autoDetectColorScheme": true,
     "explorer.confirmDragAndDrop": false,
     "workbench.preferredLightColorTheme": "Dark 2026",
+    "workbench.editor.showTabs": "single",
+    "diffEditor.renderSideBySide": false,
 }
