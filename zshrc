@@ -4,7 +4,10 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search ssh-agent)
+
+# Only prompt for the SSH key passphrase when a key is actually needed, not on every shell start
+zstyle :omz:plugins:ssh-agent lazy yes
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -74,3 +77,40 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 # Google Cloud SDK
 export PATH="$HOME/Dev/04_Lewagon/google-cloud-sdk/bin:$PATH"
 if [ -f "$HOME/Dev/04_Lewagon/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/Dev/04_Lewagon/google-cloud-sdk/completion.zsh.inc"; fi
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export GOOGLE_APPLICATION_CREDENTIALS=/home/cjk/Dev/04_Lewagon/rec/le-wagon-bootcamp-503013-acee98e15211.json
+
+# 03-Decision-Science Olist module imports
+export PYTHONPATH="/home/cjk/code/CevenJKnowles/03-Decision-Science:$PYTHONPATH"
+alias gp='git push'
+
+# ---------- Accessible palette prompt ----------
+C_PATH='#17FCD0'    # location
+C_OK='#9CF216'      # good
+C_ATTN='#F59423'    # attention
+C_BAD='#FF6BAC'     # problem
+C_INFO='#A29DF7'    # information
+C_DIM='#9A9AA5'     # structure
+
+ZSH_THEME_GIT_PROMPT_PREFIX="  %F{$C_DIM}git:(%F{$C_ATTN}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%f"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{$C_DIM})"
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{$C_DIM})"
+
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{$C_ATTN}?"
+ZSH_THEME_GIT_PROMPT_ADDED="%F{$C_OK}+"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%F{$C_BAD}!"
+ZSH_THEME_GIT_PROMPT_RENAMED="%F{$C_ATTN}>"
+ZSH_THEME_GIT_PROMPT_DELETED="%F{$C_BAD}x"
+ZSH_THEME_GIT_PROMPT_STASHED="%F{$C_INFO}\$"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%F{$C_BAD}="
+ZSH_THEME_GIT_PROMPT_AHEAD="%F{$C_OK}^"
+ZSH_THEME_GIT_PROMPT_BEHIND="%F{$C_ATTN}v"
+ZSH_THEME_GIT_PROMPT_DIVERGED="%F{$C_BAD}Y"
+
+PROMPT="%(?:%F{$C_OK}%1{➜%}:%F{$C_BAD}%1{➜%})"
+PROMPT+="  %F{$C_PATH}%c%f"
+PROMPT+='$(git_prompt_info)$(git_prompt_status)'
+PROMPT+="%f  %F{$C_PATH}%1{➜%}%f  "
