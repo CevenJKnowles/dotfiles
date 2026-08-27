@@ -96,7 +96,7 @@
     "chat.viewSessions.orientation": "stacked",
     "window.autoDetectColorScheme": true,
     "explorer.confirmDragAndDrop": false,
-    "workbench.preferredLightColorTheme": "Google Colab Dark Theme",
+    "workbench.preferredLightColorTheme": "Visual Studio Dark",
     "workbench.editor.showTabs": "multiple",
     "diffEditor.renderSideBySide": false,
     "yaml.disableSchemaDetection": [
@@ -115,6 +115,7 @@
     "workbench.editor.highlightModifiedTabs": true,
     "notebook.cellToolbarLocation": {
       "default": "right",
-      "jupyter-notebook": "left"
+      "jupyter-notebook": "right"
     },
+    "zenMode.centerLayout": false,
 }
