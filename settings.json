@@ -118,4 +118,6 @@
       "jupyter-notebook": "right"
     },
     "zenMode.centerLayout": false,
+    "git.defaultCloneDirectory": "/home/cjk/code/CevenJKnowles",
+    "gitlens.graph.details.location": "auto",
 }
