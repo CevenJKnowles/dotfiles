@@ -115,6 +115,6 @@
     "workbench.editor.highlightModifiedTabs": true,
     "notebook.cellToolbarLocation": {
       "default": "right",
-      "jupyter-notebook": "right"
+      "jupyter-notebook": "left"
     },
 }
