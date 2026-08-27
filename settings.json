@@ -113,4 +113,8 @@
       "vscode-kubernetes.minikube-path-linux": "/home/cjk/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
     },
     "workbench.editor.highlightModifiedTabs": true,
+    "notebook.cellToolbarLocation": {
+      "default": "right",
+      "jupyter-notebook": "right"
+    },
 }

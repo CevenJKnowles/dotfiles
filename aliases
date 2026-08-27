@@ -13,3 +13,6 @@ alias jlab="jupyter-lab"
 
 # Quickly launch Dolphin file manager
 alias dolp="dolphin"
+
+# Claude Code, dockerized (opens a new Konsole window inside claude-box)
+alias claude="~/Dev/00_Environments/claude-container/launch-claude.sh"
