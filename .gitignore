@@ -1,0 +1,12 @@
+# VS Code local
+.vscode/
+settings.json
+keybindings.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# temp/editor
+*~
+*.swp
+.DS_Store
