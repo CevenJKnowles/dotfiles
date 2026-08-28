@@ -96,7 +96,7 @@
     "chat.viewSessions.orientation": "stacked",
     "window.autoDetectColorScheme": true,
     "explorer.confirmDragAndDrop": false,
-    "workbench.preferredLightColorTheme": "Visual Studio Dark",
+    "workbench.preferredLightColorTheme": "Arc Dark",
     "workbench.editor.showTabs": "multiple",
     "diffEditor.renderSideBySide": false,
     "yaml.disableSchemaDetection": [
