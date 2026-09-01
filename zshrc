@@ -6,8 +6,9 @@ ZSH_THEME="robbyrussell"
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
 plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search ssh-agent)
 
-# Only prompt for the SSH key passphrase when a key is actually needed, not on every shell start
-zstyle :omz:plugins:ssh-agent lazy yes
+# Prompt for the SSH key passphrase on the first shell of the session
+zstyle :omz:plugins:ssh-agent lifetime 12h
+zstyle :omz:plugins:ssh-agent identities id_ed25519
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
