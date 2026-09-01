@@ -81,7 +81,10 @@ if [ -f "$HOME/Dev/04_Lewagon/google-cloud-sdk/completion.zsh.inc" ]; then . "$H
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-export GOOGLE_APPLICATION_CREDENTIALS=/home/cjk/Dev/04_Lewagon/rec/le-wagon-bootcamp-503013-acee98e15211.json
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/path/to/your-service-account-key.json"
+
+# Local, untracked overrides (real credential paths, machine-specific values)
+[[ -f "$HOME/Dev/CJK_config/zshrc.local" ]] && source "$HOME/Dev/CJK_config/zshrc.local"
 
 # 03-Decision-Science Olist module imports
 export PYTHONPATH="/home/cjk/code/CevenJKnowles/03-Decision-Science:$PYTHONPATH"
