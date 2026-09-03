@@ -21,6 +21,12 @@ source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 unalias lt # we need `lt` for https://github.com/localtunnel/localtunnel
 
+# Share the oh-my-zsh ssh-agent with GUI apps (e.g. VSCode) launched outside a terminal
+if [ -n "$SSH_AUTH_SOCK" ]; then
+  systemctl --user set-environment SSH_AUTH_SOCK="$SSH_AUTH_SOCK" SSH_AGENT_PID="$SSH_AGENT_PID" 2>/dev/null
+  type -a dbus-update-activation-environment > /dev/null && dbus-update-activation-environment --systemd SSH_AUTH_SOCK SSH_AGENT_PID 2>/dev/null
+fi
+
 # Load rbenv if installed (to manage your Ruby versions)
 export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
