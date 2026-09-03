@@ -59,7 +59,7 @@
   rebase = false
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
 [user]
 	email = 160178756+CevenJKnowles@users.noreply.github.com
 	name = Ceven Jupiter Knowles
